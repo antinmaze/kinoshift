@@ -255,6 +255,11 @@ test('package.json : FFmpeg embarqué dans les ressources pour chaque plateforme
   assert.match(pkg.scripts['dist:mac'], /check-ffmpeg\.js/);
 });
 
+test('macOS beta builds explicitly use ad-hoc signing', () => {
+  assert.equal(pkg.build.mac.identity, '-');
+  assert.equal(pkg.build.mac.hardenedRuntime, false);
+});
+
 test('icônes : PNG 1024 px carré, ICNS et ICO valides', () => {
   const png = fs.readFileSync(path.join(ROOT, 'build/icon.png'));
   assert.equal(png.subarray(1, 4).toString(), 'PNG');

@@ -116,7 +116,7 @@ gh release create v1.0.0 dist/*.dmg dist/*.exe \
 
 ### Release caveats
 
-- macOS signing and notarization are not configured yet.
+- macOS beta builds use ad-hoc signing to preserve bundle integrity. They are not Developer ID signed or notarized and may still be blocked by Gatekeeper.
 - Windows signing is not configured yet.
 - Users may see warnings from the operating system when opening the installer files.
 
