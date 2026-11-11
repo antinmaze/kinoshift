@@ -2,7 +2,7 @@
   "name": "kinoshift",
   "productName": "Kinoshift",
   "version": "1.0.0",
-  "description": "Convertisseur audio et vidéo simple pour macOS et Windows",
+  "description": "Open-source audio and video converter for macOS and Windows",
   "main": "main.js",
   "license": "GPL-3.0-or-later",
   "author": "tonio",

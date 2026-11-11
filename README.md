@@ -1,38 +1,94 @@
 # Kinoshift
 
-**Version BETA** : l'application est encore en cours de test et peut présenter des bugs.
+Kinoshift is an open-source audio and video converter for macOS and Windows. Built with Electron and FFmpeg, it processes media locally on your machine without requiring a cloud service.
 
-Convertisseur audio et vidéo simple (macOS et Windows), basé sur Electron et FFmpeg.
-Réécriture de Miro Video Converter 3 (GPL).
+> Beta release: the application is still under validation and may contain bugs or functional limitations.
 
-## Prérequis
+## About
 
-- Node.js 22.12 ou version ultérieure.
-- Pour le développement, FFmpeg est détecté automatiquement ou peut être choisi manuellement dans l'application. Un binaire compatible peut aussi être téléchargé avec `npm run fetch-ffmpeg`.
+Kinoshift carries forward the spirit of Miro Video Converter 3 in a modern, compact, and maintainable form. The goal is to provide a practical and lightweight conversion tool for common media formats without unnecessary complexity.
 
-## Développement
+This project is distributed under the GPL-3.0-or-later license.
 
-```sh
+## Features
+
+- Local audio and video conversion
+- Built-in conversion presets
+- Automatic FFmpeg detection
+- Manual FFmpeg binary selection
+- Desktop Electron interface
+- Support for macOS and Windows
+- Automated unit, integration, and E2E tests
+
+## Requirements
+
+- Node.js 22.12 or newer
+- npm
+- macOS (Apple Silicon or Intel) or Windows x64
+
+## Development setup
+
+```bash
 npm install
-npm run fetch-ffmpeg       # télécharger FFmpeg pour la plateforme courante
-npm start      # lancer l'app
+npm run fetch-ffmpeg
+npm start
 ```
 
-Les exécutables FFmpeg ne sont pas inclus dans le dépôt. Le script de téléchargement vérifie l'empreinte SHA-256 des archives. Pour lancer la suite complète, télécharger les binaires des trois plateformes, puis exécuter les tests :
+### FFmpeg
 
-```sh
+FFmpeg binaries are not stored in the repository. In development, the app can also detect an installed FFmpeg or use a manually selected path. The provided script downloads the binaries and validates the SHA-256 hash of each archive:
+
+```bash
+npm run fetch-ffmpeg
+```
+
+To download binaries for multiple platforms:
+
+```bash
 npm run fetch-ffmpeg -- all
+```
+
+## Tests
+
+The full test suite requires FFmpeg binaries for the supported platforms, including build verification. Download them before running the checks:
+
+```bash
+npm run fetch-ffmpeg -- all
+npm test
+npm run test:e2e
 npm run test:all
 ```
 
-`npm test` lance les tests unitaires et d'intégration ; `npm run test:e2e` lance les tests de l'interface Electron.
+- `npm test`: unit and integration tests
+- `npm run test:e2e`: Electron UI tests
+- `npm run test:all`: full test suite
 
-## Créer les installeurs
+## Building installers
 
-```sh
-npm run dist:mac   # .dmg (à lancer sur macOS)
-npm run dist:win   # installeur NSIS .exe (idéalement sur Windows)
+On macOS:
+
+```bash
+npm run dist:mac
 ```
 
-Les scripts de distribution téléchargent les binaires FFmpeg nécessaires. Les installeurs sont générés dans `dist/` avec les icônes fournies.
-La signature / notarisation macOS et la signature Windows ne sont pas configurées.
+On Windows:
+
+```bash
+npm run dist:win
+```
+
+The build scripts download the required FFmpeg executables and generate output in the `dist/` folder. The macOS build targets Apple Silicon and Intel DMG images, while the Windows build targets x64 NSIS installers.
+
+## Release notes
+
+- macOS signing and notarization are not configured yet.
+- Windows signing is not configured yet.
+- Users may see warnings from the operating system when opening the installer files.
+
+## License
+
+This project is published under the [GPL-3.0-or-later](LICENSE) license. The FFmpeg binaries and their bundled dependencies are subject to their own licenses; provenance information is included with the downloaded binaries.
+
+## Contributing
+
+Contributions, bug reports, and feature suggestions are welcome. Before submitting changes, it is recommended to run the local test suite to verify that behavior remains consistent.
