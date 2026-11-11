@@ -1,0 +1,20 @@
+name: Documentation and metadata
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  discoverability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate metadata, links, structured data, and preview assets
+        run: node --test test/discoverability.test.js

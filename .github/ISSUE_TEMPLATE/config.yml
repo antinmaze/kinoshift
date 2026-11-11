@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download Kinoshift
+    url: https://github.com/antinmaze/kinoshift/releases
+    about: Find macOS and Windows installers and read the beta release notes.
+  - name: Usage and installation guide
+    url: https://github.com/antinmaze/kinoshift#quick-start
+    about: Check formats, requirements, and common conversion tasks before opening an issue.

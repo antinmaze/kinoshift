@@ -1,0 +1,11 @@
+{
+  "repository": "antinmaze/kinoshift",
+  "description": "Free, offline video & audio converter for macOS and Windows. FFmpeg GUI for MP4, MP3, WebM, GIF, audio extraction and batch conversion. No cloud uploads.",
+  "homepage": "https://antoinemaze.fr/kinoshift/",
+  "topics": [
+    "video-converter", "audio-converter", "media-converter", "ffmpeg", "ffmpeg-gui",
+    "batch-conversion", "audio-extraction", "video-to-gif", "video-compression",
+    "mp4", "mp3", "webm", "hevc", "offline", "privacy", "open-source",
+    "electron", "desktop-app", "macos", "windows"
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#10192f"/>
+      <stop offset="1" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="accent" x2="1" y2="1">
+      <stop stop-color="#8b8bff"/>
+      <stop offset="1" stop-color="#5de2ce"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1120" cy="60" r="250" fill="#8b8bff" opacity=".07"/>
+  <circle cx="1210" cy="540" r="300" fill="#5de2ce" opacity=".05"/>
+  <rect x="72" y="72" width="68" height="68" rx="18" fill="url(#accent)"/>
+  <text x="106" y="121" text-anchor="middle" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="#080c18">K</text>
+  <g font-family="Arial,sans-serif" fill="#f2f4ff">
+    <text x="164" y="120" font-size="44" font-weight="700">Kinoshift</text>
+    <text x="72" y="248" font-size="62" font-weight="700">Your media.</text>
+    <text x="72" y="324" font-size="62" font-weight="700">Your computer. No cloud.</text>
+    <text x="76" y="393" font-size="29" fill="#b9c5e0">Free, offline video &amp; audio converter</text>
+    <text x="76" y="440" font-size="26" fill="#b9c5e0">macOS + Windows · Powered by FFmpeg</text>
+    <text x="76" y="545" font-size="24" fill="#75e4d3">MP4 · MP3 · WebM · GIF · Batch conversion</text>
+    <text x="76" y="591" font-size="21" fill="#a3aec9">github.com/antinmaze/kinoshift · Open source · Public beta</text>
+  </g>
+</svg>

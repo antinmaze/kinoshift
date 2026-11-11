@@ -2,7 +2,20 @@
   "name": "kinoshift",
   "productName": "Kinoshift",
   "version": "1.0.0",
-  "description": "Open-source audio and video converter for macOS and Windows",
+  "description": "Free, offline video and audio converter for macOS and Windows. An FFmpeg GUI for MP4, MP3, WebM, GIF, and batch conversion.",
+  "homepage": "https://antoinemaze.fr/kinoshift/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antinmaze/kinoshift.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antinmaze/kinoshift/issues"
+  },
+  "keywords": [
+    "video-converter", "audio-converter", "media-converter", "ffmpeg",
+    "ffmpeg-gui", "batch-conversion", "audio-extraction", "video-to-gif",
+    "mp4", "mp3", "webm", "hevc", "offline", "privacy", "electron", "macos", "windows"
+  ],
   "main": "main.js",
   "license": "GPL-3.0-or-later",
   "author": "tonio",
@@ -17,6 +30,9 @@
     "dist:win": "node scripts/fetch-ffmpeg.js win-x64 && electron-builder --win",
     "dist": "node scripts/fetch-ffmpeg.js all && node scripts/check-ffmpeg.js && electron-builder --mac --win",
     "release:github": "bash scripts/release.sh",
+    "github:check": "node scripts/github-metadata.js --check",
+    "github:sync": "node scripts/github-metadata.js --apply",
+    "docs:screenshots": "node scripts/capture-preview.js",
     "test:e2e": "node --test --test-concurrency=1 test/e2e/*.test.js",
     "test:all": "npm test && npm run test:e2e"
   },
