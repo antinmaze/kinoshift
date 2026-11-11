@@ -1,21 +1,21 @@
 :root {
   color-scheme: dark;
-  --bg: #120910;
-  --bg-alt: #1c0d1a;
-  --panel: rgba(35, 15, 31, 0.82);
-  --panel-strong: rgba(28, 12, 24, 0.97);
-  --card: rgba(32, 15, 28, 0.9);
-  --card-soft: rgba(28, 12, 24, 0.68);
-  --line: rgba(255, 135, 221, 0.2);
+  --bg: #382735;
+  --bg-alt: #493343;
+  --panel: rgba(76, 52, 69, 0.88);
+  --panel-strong: rgba(66, 45, 59, 0.97);
+  --card: rgba(78, 54, 71, 0.92);
+  --card-soft: rgba(76, 52, 69, 0.72);
+  --line: rgba(255, 185, 229, 0.28);
   --text: #fdf3ff;
-  --muted: #e5b9dd;
+  --muted: #eed3e7;
   --primary: #ff5cb8;
   --primary-strong: #ea3fa6;
   --accent: #ff82d5;
   --pink-text: #1a0010;
   --success: #7ce5a3;
   --warning: #ffcf70;
-  --shadow: 0 24px 60px rgba(26, 8, 24, 0.52);
+  --shadow: 0 24px 60px rgba(20, 10, 20, 0.35);
 }
 
 * {
@@ -30,8 +30,8 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 92, 184, 0.12), transparent 28%),
-    linear-gradient(180deg, #1c0d1a 0%, #120910 100%);
+    radial-gradient(circle at top left, rgba(255, 150, 210, 0.16), transparent 35%),
+    linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -82,7 +82,7 @@ a {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(10, 16, 32, 0.7);
+  background: rgba(56, 39, 53, 0.88);
   border-bottom: 1px solid var(--line);
 }
 
@@ -245,7 +245,11 @@ a {
 
 .app-preview {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 512px;
+  padding: 16px;
+  background: rgba(255, 227, 246, 0.09);
+  border: 1px solid rgba(255, 210, 240, 0.32);
+  border-radius: 24px;
 }
 
 .app-preview img {
@@ -253,7 +257,7 @@ a {
   width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 40px rgba(20, 10, 20, 0.25);
 }
 
 .app-preview figcaption {
@@ -269,8 +273,8 @@ a {
 
 .mock-window {
   width: min(100%, 680px);
-  background: rgba(6, 12, 21, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #211a26;
+  border: 1px solid rgba(255, 210, 240, 0.42);
   border-radius: 1.35rem;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -483,7 +487,8 @@ a {
 }
 
 .section-alt {
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(255, 213, 240, 0.06);
+  border-block: 1px solid var(--line);
 }
 
 .section-heading {
