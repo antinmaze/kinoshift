@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kinoshift</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="ffmpeg-banner" class="banner" hidden>
+    <p>
+      <strong data-i18n="ffmpeg.missing">FFmpeg est introuvable.</strong>
+      <span data-i18n="ffmpeg.install">Installez-le (macOS : brew install ffmpeg ; Windows : winget install ffmpeg), puis cliquez sur « Réessayer », ou indiquez son emplacement.</span>
+    </p>
+    <div class="row">
+      <button id="ffmpeg-retry" type="button" data-i18n="ffmpeg.retry">Réessayer</button>
+      <button id="ffmpeg-choose" type="button" data-i18n="ffmpeg.choose">Choisir…</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="dropzone-container">
+      <span class="beta-badge">BETA</span>
+      <section id="dropzone" tabindex="0" role="button" data-i18n-aria-label="dropzone.aria" aria-label="Ajouter des fichiers">
+        <p class="big" data-i18n="dropzone.title">Glissez vos fichiers audio ou vidéo ici</p>
+        <p class="small" data-i18n="dropzone.hint">ou cliquez pour parcourir</p>
+      </section>
+    </div>
+
+    <ul id="queue" aria-live="polite"></ul>
+  </main>
+
+  <footer>
+    <div class="row">
+      <label for="format" data-i18n="format.label">Convertir en</label>
+      <select id="format"></select>
+    </div>
+    <div class="row" id="samplerate-row" hidden>
+      <label for="samplerate" data-i18n="samplerate.label">Fréquence</label>
+      <select id="samplerate"></select>
+    </div>
+    <details id="advanced" class="advanced">
+      <summary data-i18n="adv.summary">Options avancées</summary>
+      <div class="row">
+        <label for="adv-quality" data-i18n="adv.quality">Qualité</label>
+        <select id="adv-quality">
+          <option value="low" data-i18n="adv.quality.low">Économique</option>
+          <option value="normal" data-i18n="adv.quality.normal" selected>Équilibrée</option>
+          <option value="high" data-i18n="adv.quality.high">Haute</option>
+        </select>
+      </div>
+      <div class="row adv-video">
+        <label for="adv-fps" data-i18n="adv.fps">Images/s</label>
+        <select id="adv-fps">
+          <option value="" data-i18n="adv.same">Comme la source</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="15">15</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+        </select>
+      </div>
+      <div class="row adv-video">
+        <label for="adv-size" data-i18n="adv.size">Résolution</label>
+        <select id="adv-size">
+          <option value="" data-i18n="adv.same">Comme la source</option>
+          <option value="2160">Max 2160p (4K)</option>
+          <option value="1440">Max 1440p</option>
+          <option value="1080">Max 1080p</option>
+          <option value="720">Max 720p</option>
+          <option value="480">Max 480p</option>
+          <option value="360">Max 360p</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="adv-audio" data-i18n="adv.audio">Piste audio</label>
+        <select id="adv-audio">
+          <option value="0" data-i18n="adv.track1">Piste 1 (par défaut)</option>
+          <option value="1" data-i18n="adv.track2">Piste 2</option>
+          <option value="2" data-i18n="adv.track3">Piste 3</option>
+          <option value="3" data-i18n="adv.track4">Piste 4</option>
+          <option value="mute" class="adv-video-opt" data-i18n="adv.mute">Sans audio</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="adv-start" data-i18n="adv.trim">Découpe</label>
+        <input id="adv-start" type="text" inputmode="numeric" data-i18n-placeholder="adv.startPlaceholder" placeholder="Début 0:00" autocomplete="off" spellcheck="false">
+        <input id="adv-end" type="text" inputmode="numeric" data-i18n-placeholder="adv.endPlaceholder" placeholder="Fin 1:30" autocomplete="off" spellcheck="false">
+      </div>
+    </details>
+    <div class="row">
+      <label data-i18n="output.label">Dossier</label>
+      <span id="output-label" class="muted" data-i18n="output.same">Même dossier que la source</span>
+      <button id="output-choose" type="button" data-i18n="output.choose">Changer…</button>
+      <button id="output-reset" type="button" data-i18n="output.reset" hidden>Réinitialiser</button>
+    </div>
+    <div class="row actions">
+      <button id="clear" type="button" data-i18n="actions.clear">Vider les terminés</button>
+      <button id="start" type="button" class="primary" data-i18n="actions.convert">Convertir</button>
+    </div>
+  </footer>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+FFmpeg 9.0.2 — build statique GPL v3
+Source du binaire : Martin Riedl (https://ffmpeg.martin-riedl.de), macOS x86_64
+Archive : https://ffmpeg.martin-riedl.de/download/macos/amd64/1789931006_9.0.2/ffmpeg.zip
+SHA-256 de l'archive : 7c6b4125b191cbf773832dc51f424cf2b6bb7da43007d1e066f95909e47cacd4
+
+Code source FFmpeg : https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz
+Les bibliothèques intégrées (x264, x265, libvpx, opus, lame, vorbis…) sont sous leurs licences respectives ;
+le binaire est distribué sous GNU GPL v3 (voir LICENSE).

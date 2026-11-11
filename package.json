@@ -1,0 +1,70 @@
+{
+  "name": "kinoshift",
+  "productName": "Kinoshift",
+  "version": "1.0.0",
+  "description": "Convertisseur audio et vidéo simple pour macOS et Windows",
+  "main": "main.js",
+  "license": "GPL-3.0-or-later",
+  "author": "tonio",
+  "scripts": {
+    "postinstall": "node scripts/set-dev-name.js",
+    "prestart": "node scripts/set-dev-name.js",
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "fetch-ffmpeg": "node scripts/fetch-ffmpeg.js",
+    "check-ffmpeg": "node scripts/check-ffmpeg.js",
+    "dist:mac": "node scripts/fetch-ffmpeg.js mac-arm64 mac-x64 && node scripts/check-ffmpeg.js && electron-builder --mac",
+    "dist:win": "node scripts/fetch-ffmpeg.js win-x64 && electron-builder --win",
+    "dist": "node scripts/fetch-ffmpeg.js all && node scripts/check-ffmpeg.js && electron-builder --mac --win",
+    "test:e2e": "node --test --test-concurrency=1 test/e2e/*.test.js",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "build": {
+    "appId": "com.tonio.kinoshift",
+    "productName": "Kinoshift",
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib/**",
+      "renderer/**",
+      "build/icon.png"
+    ],
+    "extraResources": [
+      {
+        "from": "vendor/ffmpeg/${os}-${arch}",
+        "to": "ffmpeg"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.video",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.0.0",
+    "playwright-core": "^1.65.0"
+  }
+}
