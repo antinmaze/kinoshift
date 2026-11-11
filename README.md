@@ -1,5 +1,7 @@
 # Kinoshift
 
+[Website](https://antoinemaze.fr/kinoshift/) · [Download](https://github.com/antinmaze/kinoshift/releases) · [Report an issue](https://github.com/antinmaze/kinoshift/issues)
+
 Kinoshift is an open-source audio and video converter for macOS and Windows. Built with Electron and FFmpeg, it processes media locally on your machine without requiring a cloud service.
 
 > Beta release: the application is still under validation and may contain bugs or functional limitations.
