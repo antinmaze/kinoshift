@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kinoshift is a lightweight open-source media converter for macOS and Windows built with Electron and FFmpeg."
+    />
+    <title>Kinoshift | Open-source media converter</title>
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+      <div class="container navbar">
+        <a class="brand" href="#home" aria-label="Kinoshift home">
+          <span class="brand-mark">K</span>
+          <span>Kinoshift</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#preview">Preview</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#download">Download</a>
+        </nav>
+
+        <a class="button button-small button-ghost" href="https://github.com/antinmaze/kinoshift" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">BETA • Open-source desktop app</div>
+            <h1>Convert audio and video locally, with no cloud required.</h1>
+            <p>
+              Kinoshift helps you turn media files into the right format in a fast,
+              familiar workflow powered by FFmpeg and designed for macOS and Windows.
+            </p>
+
+            <div class="cta-row">
+              <a class="button button-primary" href="#download">Download</a>
+              <a class="button button-secondary" href="https://github.com/antinmaze/kinoshift" target="_blank" rel="noreferrer">View project</a>
+            </div>
+
+            <ul class="trust-list" aria-label="Product highlights">
+              <li>Fast local conversion</li>
+              <li>FFmpeg-powered</li>
+              <li>Simple desktop workflow</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Kinoshift application preview">
+            <div class="window mock-window">
+              <div class="window-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+
+              <div class="window-body">
+                <aside class="sidebar">
+                  <div class="logo-mini">K</div>
+                  <div class="mini-item active"></div>
+                  <div class="mini-item"></div>
+                  <div class="mini-item"></div>
+                </aside>
+
+                <section class="workspace">
+                  <div class="toolbar">
+                    <button class="pill is-primary">Add files</button>
+                    <button class="pill">Convert</button>
+                  </div>
+
+                  <div class="content-grid">
+                    <div class="stack-panel">
+                      <div class="panel-header">
+                        <span>Queue</span>
+                        <span class="badge">3 files</span>
+                      </div>
+
+                      <div class="file-row">
+                        <div class="file-icon video"></div>
+                        <div class="file-meta">
+                          <strong>clip-01.mov</strong>
+                          <small>1080p • H.264</small>
+                        </div>
+                      </div>
+
+                      <div class="file-row">
+                        <div class="file-icon audio"></div>
+                        <div class="file-meta">
+                          <strong>voice-track.mp3</strong>
+                          <small>44.1 kHz</small>
+                        </div>
+                      </div>
+
+                      <div class="file-row">
+                        <div class="file-icon video"></div>
+                        <div class="file-meta">
+                          <strong>promo.mp4</strong>
+                          <small>720p • ready</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="settings-panel">
+                      <div class="panel-header">
+                        <span>Preset</span>
+                        <span class="badge neutral">MP4</span>
+                      </div>
+
+                      <div class="option-line">
+                        <span>Codec</span>
+                        <span>H.264</span>
+                      </div>
+                      <div class="option-line">
+                        <span>Resolution</span>
+                        <span>1920x1080</span>
+                      </div>
+                      <div class="option-line">
+                        <span>Audio</span>
+                        <span>Enabled</span>
+                      </div>
+
+                      <div class="progress-box">
+                        <div class="progress-bar">
+                          <span></span>
+                        </div>
+                        <small>Converting • 72%</small>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Why Kinoshift</span>
+            <h2>Built for quick conversions and smooth everyday media work.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Fast</h3>
+              <p>Convert local media files without leaving your desktop environment or relying on a remote service.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🧩</div>
+              <h3>Simple presets</h3>
+              <p>Choose a target format and focus on the result instead of complicated conversion settings.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3>Privacy-first</h3>
+              <p>Your files stay on your machine, helping protect content and reduce workflow friction.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="preview" class="section section-alt">
+        <div class="container">
+          <div class="section-heading left-align">
+            <span class="eyebrow">Product preview</span>
+            <h2>Made for creators, editors, and quick media cleanup.</h2>
+          </div>
+
+          <div class="screenshot-grid">
+            <article class="shot-card">
+              <div class="shot-window">
+                <div class="shot-header">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="shot-body">
+                  <div class="shot-row long"></div>
+                  <div class="shot-row"></div>
+                  <div class="shot-row small"></div>
+                  <div class="shot-panel"></div>
+                </div>
+              </div>
+              <h3>Queue overview</h3>
+            </article>
+
+            <article class="shot-card">
+              <div class="shot-window">
+                <div class="shot-header">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="shot-body compact">
+                  <div class="shot-block"></div>
+                  <div class="shot-block accent"></div>
+                  <div class="shot-line"></div>
+                  <div class="shot-line short"></div>
+                </div>
+              </div>
+              <h3>Preset configuration</h3>
+            </article>
+
+            <article class="shot-card">
+              <div class="shot-window">
+                <div class="shot-header">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="shot-body compact">
+                  <div class="timeline">
+                    <span class="track"></span>
+                    <span class="track active"></span>
+                    <span class="track"></span>
+                  </div>
+                  <div class="status-card">
+                    <strong>Done</strong>
+                    <small>Output ready</small>
+                  </div>
+                </div>
+              </div>
+              <h3>Output status</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Workflow</span>
+            <h2>Three simple steps to convert your files.</h2>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-number">01</span>
+              <h3>Add files</h3>
+              <p>Drop in one or several videos or audio files from your device or folders.</p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-number">02</span>
+              <h3>Choose a preset</h3>
+              <p>Pick the output format and adjust the settings to match your target device or workflow.</p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-number">03</span>
+              <h3>Convert and export</h3>
+              <p>Run the conversion locally and keep the finished files ready for reuse.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="section cta-section">
+        <div class="container cta-panel">
+          <div>
+            <span class="eyebrow">Download</span>
+            <h2>Try Kinoshift and build your own conversion workflow.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="button button-primary" href="https://github.com/antinmaze/kinoshift/releases" target="_blank" rel="noreferrer">Get latest release</a>
+            <a class="button button-ghost" href="https://github.com/antinmaze/kinoshift" target="_blank" rel="noreferrer">Source code</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Kinoshift</p>
+        <p>Built with Electron and FFmpeg</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
