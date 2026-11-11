@@ -79,7 +79,42 @@ npm run dist:win
 
 The build scripts download the required FFmpeg executables and generate output in the `dist/` folder. The macOS build targets Apple Silicon and Intel DMG images, while the Windows build targets x64 NSIS installers.
 
-## Release notes
+## Release publishing
+
+The project is ready to publish GitHub builds for the macOS and Windows installers.
+
+### Create release notes
+
+Use the release notes in [RELEASE_NOTES.md](RELEASE_NOTES.md) for the initial beta publication.
+
+### Publish from the terminal
+
+```bash
+npm install
+npm run dist
+npm run release:github -- 1.0.0
+```
+
+This script will:
+
+- build the macOS and Windows installers
+- validate that artifacts exist in `dist/`
+- create or update the GitHub release for the given version
+- attach the generated `.dmg` and `.exe` files to the release
+
+### Manual GitHub publication
+
+If you prefer to publish manually:
+
+```bash
+git tag v1.0.0
+git push origin main --tags
+gh release create v1.0.0 dist/*.dmg dist/*.exe \
+  --title "Kinoshift v1.0.0" \
+  --notes-file RELEASE_NOTES.md
+```
+
+### Release caveats
 
 - macOS signing and notarization are not configured yet.
 - Windows signing is not configured yet.
