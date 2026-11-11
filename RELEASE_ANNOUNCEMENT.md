@@ -24,7 +24,8 @@ Kinoshift is an open-source media converter built for macOS and Windows. It help
 
 This is a beta release, which means it is still being validated and may contain rough edges, bugs, or limitations. We are publishing it early to gather feedback and improve the project before broader adoption.
 
-- macOS signing and notarization are not configured yet
+- Updated macOS installers use ad-hoc signing to fix the invalid bundle signature in the original downloads. If you downloaded an earlier DMG, download it again and replace the old application.
+- macOS Developer ID signing and notarization are not configured yet. Gatekeeper may still block the application; ad-hoc signing does not establish developer trust.
 - Windows code signing is not configured yet
 - Operating systems may display security warnings when opening the installer
 
