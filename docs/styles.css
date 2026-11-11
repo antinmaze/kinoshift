@@ -243,6 +243,25 @@ a {
   background: linear-gradient(135deg, var(--primary-strong), var(--success));
 }
 
+.app-preview {
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.app-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+.app-preview figcaption {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
 .hero-visual {
   display: flex;
   justify-content: center;

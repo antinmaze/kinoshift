@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible installation or conversion problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for testing Kinoshift. Search existing issues first. Do not share private media, personal paths, or sensitive logs."
+  - type: input
+    id: version
+    attributes:
+      label: Kinoshift version
+      placeholder: "1.0.0 beta"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and processor
+      placeholder: "macOS version + Apple Silicon/Intel, or Windows version + x64"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the input format, output preset, and advanced settings. If using a custom FFmpeg binary, include its version.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and error message
+      description: Screenshots or a small public-domain or self-created sample are helpful. Remove sensitive information.
+    validations:
+      required: true

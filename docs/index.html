@@ -5,9 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kinoshift is a lightweight open-source media converter for macOS and Windows built with Electron and FFmpeg."
+      content="Free, offline video and audio converter for macOS and Windows. Convert MP4, MP3, WebM and GIF with an open-source FFmpeg GUI. No cloud uploads."
     />
-    <title>Kinoshift | Open-source media converter</title>
+    <title>Kinoshift — Free Offline Video &amp; Audio Converter</title>
+    <link rel="canonical" href="https://antoinemaze.fr/kinoshift/" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kinoshift" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://antoinemaze.fr/kinoshift/" />
+    <meta property="og:title" content="Kinoshift — Free Offline Video &amp; Audio Converter" />
+    <meta property="og:description" content="Convert video, extract audio, and make GIFs on macOS and Windows. Open-source FFmpeg GUI. Your media stays on your computer." />
+    <meta property="og:image" content="https://antoinemaze.fr/kinoshift/assets/social-preview.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="Kinoshift: free, offline video and audio conversion for macOS and Windows" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kinoshift — Free Offline Video &amp; Audio Converter" />
+    <meta name="twitter:description" content="An open-source FFmpeg GUI for MP4, MP3, WebM, GIF, and batch conversion. No cloud uploads. No account required." />
+    <meta name="twitter:image" content="https://antoinemaze.fr/kinoshift/assets/social-preview.png" />
+    <meta name="twitter:image:alt" content="Kinoshift: free, offline video and audio conversion for macOS and Windows" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Kinoshift",
+        "url": "https://antoinemaze.fr/kinoshift/",
+        "description": "Free, open-source offline video and audio converter powered by FFmpeg for macOS and Windows.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS, Windows",
+        "license": "https://github.com/antinmaze/kinoshift/blob/main/LICENSE",
+        "downloadUrl": "https://github.com/antinmaze/kinoshift/releases",
+        "installUrl": "https://github.com/antinmaze/kinoshift#download-for-macos-and-windows",
+        "screenshot": "https://antoinemaze.fr/kinoshift/assets/kinoshift-app.png",
+        "image": "https://antoinemaze.fr/kinoshift/assets/social-preview.png",
+        "inLanguage": ["en", "fr"],
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
     <meta name="theme-color" content="#0b1020" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,10 +82,11 @@
         <div class="container hero-inner">
           <div class="hero-copy">
             <div class="eyebrow">BETA • Open-source desktop app</div>
-            <h1>Convert audio and video locally, with no cloud required.</h1>
+            <h1>Free, offline video and audio converter.</h1>
             <p>
-              Kinoshift helps you turn media files into the right format in a fast,
-              familiar workflow powered by FFmpeg and designed for macOS and Windows.
+              Convert MP4, MP3, WebM, and GIF on macOS and Windows with an open-source
+              FFmpeg desktop app. Your media stays on your computer: no cloud uploads,
+              no account required.
             </p>
 
             <div class="cta-row">
@@ -64,7 +101,7 @@
             </ul>
           </div>
 
-          <div class="hero-visual" aria-label="Kinoshift application preview">
+          <div class="hero-visual" aria-label="Illustrative workflow concept; see the real application screenshot below">
             <div class="window mock-window">
               <div class="window-bar">
                 <span class="dot red"></span>
@@ -184,61 +221,14 @@
       <section id="preview" class="section section-alt">
         <div class="container">
           <div class="section-heading left-align">
-            <span class="eyebrow">Product preview</span>
-            <h2>Made for creators, editors, and quick media cleanup.</h2>
+            <span class="eyebrow">Actual application screenshot</span>
+            <h2>A focused desktop interface for local media conversion.</h2>
           </div>
 
-          <div class="screenshot-grid">
-            <article class="shot-card">
-              <div class="shot-window">
-                <div class="shot-header">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="shot-body">
-                  <div class="shot-row long"></div>
-                  <div class="shot-row"></div>
-                  <div class="shot-row small"></div>
-                  <div class="shot-panel"></div>
-                </div>
-              </div>
-              <h3>Queue overview</h3>
-            </article>
-
-            <article class="shot-card">
-              <div class="shot-window">
-                <div class="shot-header">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="shot-body compact">
-                  <div class="shot-block"></div>
-                  <div class="shot-block accent"></div>
-                  <div class="shot-line"></div>
-                  <div class="shot-line short"></div>
-                </div>
-              </div>
-              <h3>Preset configuration</h3>
-            </article>
-
-            <article class="shot-card">
-              <div class="shot-window">
-                <div class="shot-header">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="shot-body compact">
-                  <div class="timeline">
-                    <span class="track"></span>
-                    <span class="track active"></span>
-                    <span class="track"></span>
-                  </div>
-                  <div class="status-card">
-                    <strong>Done</strong>
-                    <small>Output ready</small>
-                  </div>
-                </div>
-              </div>
-              <h3>Output status</h3>
-            </article>
-          </div>
+          <figure class="app-preview">
+            <img src="assets/kinoshift-app.png" alt="Kinoshift FFmpeg GUI with a media queue, MP4 output preset, and advanced conversion settings" width="480" height="732" loading="lazy" />
+            <figcaption>The real Kinoshift interface. Queue files, pick an output preset, and adjust conversion settings.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -276,11 +266,35 @@
           <div>
             <span class="eyebrow">Download</span>
             <h2>Try Kinoshift and build your own conversion workflow.</h2>
+            <p>Public beta for macOS Apple Silicon, macOS Intel, and Windows x64. macOS builds are not notarized; Windows builds are unsigned. Read the release notes before installing.</p>
           </div>
           <div class="cta-actions">
             <a class="button button-primary" href="https://github.com/antinmaze/kinoshift/releases" target="_blank" rel="noreferrer">Get latest release</a>
             <a class="button button-ghost" href="https://github.com/antinmaze/kinoshift" target="_blank" rel="noreferrer">Source code</a>
           </div>
+        </div>
+      </section>
+      <section id="formats" class="section">
+        <div class="container">
+          <div class="section-heading left-align">
+            <span class="eyebrow">Formats and common questions</span>
+            <h2>Convert video, extract MP3 audio, or make an animated GIF.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Which output formats are supported?</h3>
+              <p>MP4 and MKV with H.264, WebM with VP9, MP3, AAC/M4A, WAV, FLAC, OGG Vorbis, and animated GIF. Selected device presets also support HEVC/H.265. Input compatibility depends on your FFmpeg build.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Can I convert files offline or in batches?</h3>
+              <p>Yes. Once installed, Kinoshift processes your media locally without a conversion account. Add multiple files to the queue; jobs run one at a time. No media uploads are required.</p>
+            </article>
+            <article class="feature-card" lang="fr">
+              <h3>Un convertisseur vidéo gratuit en français ?</h3>
+              <p>Kinoshift est un convertisseur vidéo et audio libre pour Mac et Windows. Convertissez en MP4, MP3, WebM ou GIF sans téléverser vos fichiers. L’interface et l’aide existent en français et en anglais.</p>
+            </article>
+          </div>
+          <p>Find Kinoshift useful? <a href="https://github.com/antinmaze/kinoshift">Star the project on GitHub</a>, share your experience, or <a href="https://github.com/antinmaze/kinoshift/issues">report a bug</a> to help improve the beta.</p>
         </div>
       </section>
     </main>

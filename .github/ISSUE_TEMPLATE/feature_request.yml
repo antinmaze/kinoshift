@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an improvement with a concrete media conversion use case.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe your workflow and the limitation you encounter. Search existing requests first.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed improvement
+      description: Explain the desired behavior and any relevant formats, devices, or platforms.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
